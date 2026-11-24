@@ -1,0 +1,13 @@
+{
+  "name": "atomic-trello",
+  "version": "1.0.0",
+  "description": "A small Trello-style board app with roles (owner / member / viewer)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.32.0",
+    "express": "^4.21.2"
+  }
+}

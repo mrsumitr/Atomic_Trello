@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atomic Trello</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#0c66e4" />
+          <rect x="6" y="6" width="5" height="11" rx="1.5" fill="#fff" />
+          <rect x="13" y="6" width="5" height="7" rx="1.5" fill="#fff" />
+        </svg>
+        Atomic Trello
+      </a>
+
+      <!-- User switcher: a styled pill around a real <select> so it stays keyboard-friendly -->
+      <div class="user-pill" title="Switch user">
+        <span class="avatar" id="userAvatar">?</span>
+        <select id="userSelect" aria-label="Signed in as"></select>
+        <span class="chevron" aria-hidden="true">▾</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <!-- Card editor popup -->
+  <dialog id="cardDialog">
+    <form method="dialog" id="cardForm">
+      <label>Title
+        <input id="cardTitle" required />
+      </label>
+      <label>Description
+        <textarea id="cardDesc" rows="5"></textarea>
+      </label>
+      <div class="dialog-buttons">
+        <button type="button" id="cardDelete" class="danger">Delete</button>
+        <span class="spacer"></span>
+        <button type="button" id="cardCancel">Close</button>
+        <button type="submit" id="cardSave" class="primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
